@@ -1,13 +1,13 @@
-# import standard packages
+# -*- coding: utf-8 -*-
 from tqdm import tqdm
 
+# this function updates X and y variables iterateviley by iterating scope index one-by-one for expanding modeling approach
 def find_training_cols(base_columns, radius_columns, scope_idx):
     base_columns.extend(radius_columns[scope_idx-1:scope_idx])
     target_column = radius_columns[scope_idx:scope_idx+1]
     return base_columns, target_column
 
 def create_subchunks(df, train_columns, target_column):
-    # create empty X and y lists
     X, y = [], []
     
     for i in tqdm(range(len(df))):
@@ -21,12 +21,12 @@ def create_subchunks(df, train_columns, target_column):
         
     return X, y
 
-# define a wrapper function for handling exceptions
 def call_subchunker(df, base_columns, radius_columns, scope_idx):
     X, y = None, None
     try:
         train_columns, target_column = find_training_cols(base_columns, radius_columns, scope_idx)
         X, y = create_subchunks(df, train_columns, target_column)
     except Exception as e:
-        print(f'Error during subchunking: {str(e)}')
+        print(f'ERROR: Could not create subchunks - {str(e)}')
+        
     return X, y
