@@ -1,24 +1,10 @@
-# pdm-frequency-selective-surfaces-design
-
-# Project Title
+# pdm-stealth-freq
 
 This project aims to automate finding r parameters for stealth aircrafts that takes much time of the engineers.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [Training the Model](#training-the-model)
-  - [Making Predictions](#making-predictions)
-- [Project Structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-
-Provide an overview of your project. Explain what problem it solves, who the target audience is, and any other relevant details.
 
 ## Installation
 
