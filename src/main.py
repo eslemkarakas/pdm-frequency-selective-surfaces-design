@@ -14,6 +14,6 @@ def main(f1, f2):
     return result
     
 if __name__ == '__main__':
-    f1 = None
-    f2 = None
-    main(f1, f2)
+    f1 = 10
+    f2 = 60
+    print(main(f1, f2))

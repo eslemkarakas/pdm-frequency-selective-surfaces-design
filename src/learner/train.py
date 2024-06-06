@@ -56,4 +56,6 @@ def load_and_predict(f1, f2):
         r_outputs.append(float(pred))
         X = np.array([f1, f2].extend(r_outputs)).reshape(1, -1) # update input to apply expanding model approach
 
-    return r_outputs.sort() # sort not to face with logical error between r values (ex. r0>r4)
+    r_outputs.sort() # sort not to face with logical error between r values (ex. r0>r4)
+    
+    return r_outputs
