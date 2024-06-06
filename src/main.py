@@ -9,7 +9,9 @@ def main(f1, f2):
         train_model()
     
     # predict r1, r2, r3, r4, r5 values on given f1 and f2 values by using trained models
-    load_and_predict(f1, f2) # return a list that contains 5 float numbers
+    result = load_and_predict(f1, f2) # return a list that contains 5 float numbers
+    
+    return result
     
 if __name__ == '__main__':
     f1 = None
